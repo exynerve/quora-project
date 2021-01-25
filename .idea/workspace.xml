@@ -24,7 +24,47 @@
   <component name="ChangeListManager">
     <list default="true" id="47a15d9d-c79e-46a9-bbbf-df38ac55657d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/AnswerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/AnswerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/src/test/java/com/upgrad/quora/api/controller/AnswerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/src/test/java/com/upgrad/quora/api/controller/AnswerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/classes/com/upgrad/quora/api/exception/QuoraExceptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/classes/com/upgrad/quora/api/exception/QuoraExceptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerDeleteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerDeleteResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerDetailsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerDetailsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerEditRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerEditRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerEditResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerEditResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/AnswerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionDeleteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionDeleteResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionDetailsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionDetailsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionEditRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionEditRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionEditResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionEditResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/QuestionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/SigninResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/SigninResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/SignoutResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/SignoutResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/SignupUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/SignupUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/SignupUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/SignupUserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/UserDeleteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/UserDeleteResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/UserDetailsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/com/upgrad/quora/api/model/UserDetailsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/api/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/api/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/api/ApiOriginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/api/ApiOriginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/api/ApiResponseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/api/ApiResponseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/api/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/api/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/configuration/SwaggerDocumentationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/generated-sources/io/swagger/configuration/SwaggerDocumentationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/quora-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/quora-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/surefire-reports/TEST-com.upgrad.quora.api.controller.AdminControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/surefire-reports/TEST-com.upgrad.quora.api.controller.AdminControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/surefire-reports/TEST-com.upgrad.quora.api.controller.CommonControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/surefire-reports/TEST-com.upgrad.quora.api.controller.CommonControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/surefire-reports/TEST-com.upgrad.quora.api.controller.QuestionControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/surefire-reports/TEST-com.upgrad.quora.api.controller.QuestionControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/surefire-reports/TEST-com.upgrad.quora.api.controller.UserControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/surefire-reports/TEST-com.upgrad.quora.api.controller.UserControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/surefire-reports/com.upgrad.quora.api.controller.AdminControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/surefire-reports/com.upgrad.quora.api.controller.AdminControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/surefire-reports/com.upgrad.quora.api.controller.CommonControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/surefire-reports/com.upgrad.quora.api.controller.CommonControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/surefire-reports/com.upgrad.quora.api.controller.QuestionControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/surefire-reports/com.upgrad.quora.api.controller.QuestionControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/target/surefire-reports/com.upgrad.quora.api.controller.UserControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/target/surefire-reports/com.upgrad.quora.api.controller.UserControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/quora-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/quora-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-service/target/quora-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/quora-service/target/quora-service-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +146,22 @@
       <recent name="E:\Trello_quora\quora-api\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.QuestionControllerTest.deleteNoneExistingQuestion">
+  <component name="RunManager" selected="JUnit.UserControllerTest">
+    <configuration name="AdminControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quora-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upgrad.quora.api.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.upgrad.quora.api.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.upgrad.quora.api.controller.AdminControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnswerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="quora-api" />
       <extension name="coverage">
@@ -122,7 +177,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionControllerTest.createQuestionWithNonExistingAccessToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommonControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="quora-api" />
       <extension name="coverage">
         <pattern>
@@ -131,9 +186,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.upgrad.quora.api.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.upgrad.quora.api.controller.QuestionControllerTest" />
-      <option name="METHOD_NAME" value="createQuestionWithNonExistingAccessToken" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.upgrad.quora.api.controller.CommonControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,33 +223,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuoraApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="quora-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.upgrad.quora.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.upgrad.quora.api.QuoraApiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.AnswerControllerTest" />
-      <item itemvalue="JUnit.UserControllerTest" />
-      <item itemvalue="Spring Boot.QuoraApiApplication" />
-      <item itemvalue="JUnit.QuestionControllerTest.createQuestionWithNonExistingAccessToken" />
       <item itemvalue="JUnit.QuestionControllerTest.deleteNoneExistingQuestion" />
+      <item itemvalue="JUnit.AdminControllerTest" />
+      <item itemvalue="JUnit.CommonControllerTest" />
+      <item itemvalue="JUnit.UserControllerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.QuestionControllerTest.deleteNoneExistingQuestion" />
-        <item itemvalue="JUnit.QuestionControllerTest.createQuestionWithNonExistingAccessToken" />
-        <item itemvalue="Spring Boot.QuoraApiApplication" />
-        <item itemvalue="JUnit.AnswerControllerTest" />
         <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.CommonControllerTest" />
+        <item itemvalue="JUnit.AdminControllerTest" />
+        <item itemvalue="JUnit.AnswerControllerTest" />
+        <item itemvalue="JUnit.QuestionControllerTest.deleteNoneExistingQuestion" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +270,7 @@
       <workItem from="1538642827225" duration="1059000" />
       <workItem from="1538723860955" duration="5425000" />
       <workItem from="1611548291011" duration="361000" />
-      <workItem from="1611559175411" duration="8330000" />
+      <workItem from="1611559175411" duration="10031000" />
     </task>
     <task id="LOCAL-00001" summary="Created question entity">
       <created>1611559646334</created>
@@ -392,7 +433,42 @@
       <option name="project" value="LOCAL" />
       <updated>1611567717972</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Created method &quot;deleteAnswerByUserOrAdmin&quot; AnswerService to delete the answer&#10;- Returns deleted answer entity&#10;- The answer is deleted using &quot;deleteAnswer&quot; AnswerDao">
+      <created>1611567838612</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1611567838612</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Created method &quot;deleteAnswer&quot; AnswerDao to remove the answer from DB&#10;- Removes the answer from answer table in DB">
+      <created>1611567908006</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1611567908006</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Created method &quot;getAllAnswersToQuestion&quot; for the endpoint &quot;answer/all/{questionId}&quot; to return all the answers to a question&#10;- Returns list of answers&#10;- Uses CommonService to authorize the user&#10;- The list of answers are retrieved using &quot;getAllAnswersToQuestion&quot; method in AnswerService">
+      <created>1611568207414</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611568207414</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Created method &quot;getAllAnswersToQuestion&quot; to list of answers to a question&#10;- Returns list of answers entity&#10;- Uses AnswerDao to retrieve the list of answers">
+      <created>1611568361542</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1611568361542</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Created method &quot;getAllAnswersToQuestion&quot; to return list of answers to a question&#10;- Returns list of answers entity&#10;- Returns null if not found">
+      <created>1611568444152</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1611568444152</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,10 +487,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created question entity" />
-    <MESSAGE value="Created method createQuestion &#10;&#10;- POST method is used to create a Question&#10;- QuestionRequest and QuestionResponse is used to get the details from the client and send the response details to the client&#10;- stores it in DB" />
-    <MESSAGE value="Created method createQuestion in service layer" />
-    <MESSAGE value="Created method createQuestion to persist data in DB" />
     <MESSAGE value="Autowired QuestionDao with QuestionService" />
     <MESSAGE value="Autowired QuestionService and CommonService&#10;&#10;- Retrived the UserAuthEntity using common service&#10;- Storing all the details from QuestionRequest to QuestionEntity to persist in DB&#10;- After persisting store the uuid and status in the QuestionResponse and return the ResponseEntity" />
     <MESSAGE value="Created endpoint /all to get all the question in DB&#10;&#10;- Used getAllQuestions method from QuestionService to return the list of questions from data layer&#10;- Any authorized user can retrieve all the questions&#10;- Used getAllQuestions method from QuestionService to get all the questions stored in DB" />
@@ -435,25 +507,34 @@
     <MESSAGE value="Updated AnswerNotFoundException in QuoraExceptionController" />
     <MESSAGE value="Updated AnswerNotFoundException in QuoraExceptionController &#10;- This exception is thrown when the answer is not found in answer table" />
     <MESSAGE value="Created method &quot;deleteAnswer&quot; for the endpoint &quot;/answer/delete/{answerId}&quot; to delete answer by Admin or owner&#10;- Returns answer's UUID and status as &quot;ANSWER DELETED&quot;&#10;- Uses CommonService to authorize the user&#10;- The answer is retrieved using &quot;getAnswerByUuid&quot; method in AnswerService&#10;- The answer is deleted using &quot;deleteAnswerByUserOrAdmin&quot; AnswerService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created method &quot;deleteAnswer&quot; for the endpoint &quot;/answer/delete/{answerId}&quot; to delete answer by Admin or owner&#10;- Returns answer's UUID and status as &quot;ANSWER DELETED&quot;&#10;- Uses CommonService to authorize the user&#10;- The answer is retrieved using &quot;getAnswerByUuid&quot; method in AnswerService&#10;- The answer is deleted using &quot;deleteAnswerByUserOrAdmin&quot; AnswerService" />
+    <MESSAGE value="Created method &quot;deleteAnswerByUserOrAdmin&quot; AnswerService to delete the answer&#10;- Returns deleted answer entity&#10;- The answer is deleted using &quot;deleteAnswer&quot; AnswerDao" />
+    <MESSAGE value="Created method &quot;deleteAnswer&quot; AnswerDao to remove the answer from DB&#10;- Removes the answer from answer table in DB" />
+    <MESSAGE value="Created method &quot;getAllAnswersToQuestion&quot; for the endpoint &quot;answer/all/{questionId}&quot; to return all the answers to a question&#10;- Returns list of answers&#10;- Uses CommonService to authorize the user&#10;- The list of answers are retrieved using &quot;getAllAnswersToQuestion&quot; method in AnswerService" />
+    <MESSAGE value="Created method &quot;getAllAnswersToQuestion&quot; to return list of answers to a question&#10;- Returns list of answers entity&#10;- Uses AnswerDao to retrieve the list of answers" />
+    <MESSAGE value="Created method &quot;getAllAnswersToQuestion&quot; to return list of answers to a question&#10;- Returns list of answers entity&#10;- Returns null if not found" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created method &quot;getAllAnswersToQuestion&quot; to return list of answers to a question&#10;- Returns list of answers entity&#10;- Returns null if not found" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1611564603849">
+    <state x="435" y="325" key="GitRewordDialog" timestamp="1611568465806">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611564603849" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1611564603849">
+    <state x="435" y="325" key="GitRewordDialog/0.0.1536.824@0.0.1536.824" timestamp="1611568465806" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1611568841490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611564603849" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1611564603848">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611568841490" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1611568841490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611564603848" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1611564603849">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611568841490" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1611568841490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611564603849" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611568841490" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1611568841490">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611568841490" />
     <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1611564866704">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
