@@ -95,6 +95,28 @@ public class QuestionController {
     }
 
     /**
+     * This method deletes a question
+     *
+     * @param questionId question's uuid
+     * @param accessToken Used for authorization
+     *
+     * @throws AuthorizationFailedException When access token is invalid
+     * @throws InvalidQuestionException when uuid of the question is invalid
+     *
+     * returns question's uuid and message "QUESTION DELETED"
+     */
+    @RequestMapping(method = RequestMethod.DELETE, path = "/delete/{questionId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<QuestionDeleteResponse> deleteQuestion(@PathVariable("questionId") final String questionId, @RequestHeader("authorization") final String accessToken) throws AuthorizationFailedException, InvalidQuestionException {
+        final UserAuthEntity userAuthEntity = commonService.authorizeAccessToken(accessToken);
+        final QuestionEntity questionEntity = questionService.getQuestionByUuid(questionId);
+
+        final QuestionEntity deletedQuestion = questionService.deleteQuestionByUserOrAdmin(userAuthEntity, questionEntity);
+        final QuestionDeleteResponse questionDeleteResponse = new QuestionDeleteResponse().id(deletedQuestion.getUuid()).status("QUESTION DELETED");
+
+        return new ResponseEntity<QuestionDeleteResponse>(questionDeleteResponse, HttpStatus.OK);
+    }
+
+    /**
      * This method is ued to reduce boiler plate code and this returns all the questions created by a user
      *
      * @param allQuestions list of all questions in the entity format

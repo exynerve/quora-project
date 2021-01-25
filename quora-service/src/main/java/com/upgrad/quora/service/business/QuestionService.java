@@ -45,4 +45,14 @@ public class QuestionService {
         }
         return questionEntity;
     }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    public QuestionEntity deleteQuestionByUserOrAdmin(final UserAuthEntity userAuthEntity, final QuestionEntity questionEntity) throws AuthorizationFailedException {
+        if (userAuthEntity.getUser() != questionEntity.getUserId() || (userAuthEntity.getUser() != questionEntity.getUserId() && !userAuthEntity.getUser().getRole().equals("admin"))) {
+            throw new AuthorizationFailedException("ATHR-003","Only the question owner or admin can delete the question");
+        }
+
+        questionDao.deleteQuestion(questionEntity);
+        return questionEntity;
+    }
 }

@@ -40,4 +40,8 @@ public class QuestionDao {
     public void updateQuestionContent(final QuestionEntity questionEntity) {
         entityManager.merge(questionEntity);
     }
+
+    public void deleteQuestion(final QuestionEntity questionEntity) {
+        entityManager.remove(questionEntity);
+    }
 }
