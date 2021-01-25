@@ -1,5 +1,6 @@
 package com.upgrad.quora.api.controller;
 
+import com.upgrad.quora.api.model.QuestionDetailsResponse;
 import com.upgrad.quora.api.model.QuestionRequest;
 import com.upgrad.quora.api.model.QuestionResponse;
 import com.upgrad.quora.service.business.CommonService;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -53,5 +56,42 @@ public class QuestionController {
         final QuestionResponse questionResponse = new QuestionResponse().id(questionEntityCreated.getUuid()).status("QUESTION CREATED");
 
         return new ResponseEntity<QuestionResponse>(questionResponse, HttpStatus.CREATED);
+    }
+
+    /**
+     * This method returns all the questions
+     *
+     * @param accessToken Used for authorization
+     * @throws AuthorizationFailedException When access token is invalid
+     *
+     * returns list of questions with uuid and content
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/all", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<List<QuestionDetailsResponse>> getAllQuestions(@RequestHeader("authorization") final String accessToken) throws AuthorizationFailedException {
+        commonService.authorizeAccessToken(accessToken);
+
+        final List<QuestionEntity> allQuestions = questionService.getAllQuestions();
+        final List<QuestionDetailsResponse> questionDetailsResponses = convertQuestionListToJson(allQuestions);
+
+        return new ResponseEntity<List<QuestionDetailsResponse>>(questionDetailsResponses, HttpStatus.OK);
+    }
+
+    /**
+     * This method is ued to reduce boiler plate code and this returns all the questions created by a user
+     *
+     * @param allQuestions list of all questions in the entity format
+     *
+     * returns list of questions in the response i.e json format
+     */
+    public List<QuestionDetailsResponse> convertQuestionListToJson(final List<QuestionEntity> allQuestions) {
+        final List<QuestionDetailsResponse> questionDetailsResponses = new ArrayList<>();
+
+        for (QuestionEntity question : allQuestions) {
+            QuestionDetailsResponse questionDetailsResponse = new QuestionDetailsResponse().id(question.getUuid())
+                    .content(question.getContent());
+            questionDetailsResponses.add(questionDetailsResponse);
+        }
+
+        return questionDetailsResponses;
     }
 }
