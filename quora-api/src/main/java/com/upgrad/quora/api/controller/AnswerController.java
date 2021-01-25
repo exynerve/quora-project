@@ -1,5 +1,7 @@
 package com.upgrad.quora.api.controller;
 
+import com.upgrad.quora.api.model.AnswerEditRequest;
+import com.upgrad.quora.api.model.AnswerEditResponse;
 import com.upgrad.quora.api.model.AnswerRequest;
 import com.upgrad.quora.api.model.AnswerResponse;
 import com.upgrad.quora.service.business.AnswerService;
@@ -8,6 +10,7 @@ import com.upgrad.quora.service.business.QuestionService;
 import com.upgrad.quora.service.entity.AnswerEntity;
 import com.upgrad.quora.service.entity.QuestionEntity;
 import com.upgrad.quora.service.entity.UserAuthEntity;
+import com.upgrad.quora.service.exception.AnswerNotFoundException;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import com.upgrad.quora.service.exception.InvalidQuestionException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,5 +62,27 @@ public class AnswerController {
         final AnswerResponse answerResponse = new AnswerResponse().id(answerEntityCreated.getUuid()).status("ANSWER CREATED");
 
         return new ResponseEntity<AnswerResponse>(answerResponse, HttpStatus.CREATED);
+    }
+
+    /**
+     * This method updated the answer
+     *
+     * @param answerEditRequest contains the details of edited answer to be stored in DB
+     * @param accessToken Used for authorization
+     *
+     * @throws AuthorizationFailedException When access token is invalid
+     * @throws AnswerNotFoundException When answer uuid is invalid
+     *
+     * returns answer's uuid and message "ANSWER EDITED"
+     */
+    @RequestMapping(method = RequestMethod.PUT, path = "/answer/edit/{answerId}", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<AnswerEditResponse> editAnswerContent(final AnswerEditRequest answerEditRequest, @PathVariable("answerId") final String answerId, @RequestHeader("authorization") final String accessToken) throws AuthorizationFailedException, AnswerNotFoundException {
+        final UserAuthEntity userAuthEntity = commonService.authorizeAccessToken(accessToken);
+        final AnswerEntity answerEntity = answerService.getAnswerByUuid(answerId);
+
+        final AnswerEntity editedQuestion = answerService.editAnswerByOwner(answerEditRequest.getContent(), answerEntity, userAuthEntity);
+        final AnswerEditResponse answerEditResponse = new AnswerEditResponse().id(editedQuestion.getUuid()).status("ANSWER EDITED");
+
+        return new ResponseEntity<AnswerEditResponse>(answerEditResponse, HttpStatus.OK);
     }
 }
