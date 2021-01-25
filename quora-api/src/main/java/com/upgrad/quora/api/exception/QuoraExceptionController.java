@@ -52,4 +52,11 @@ public class QuoraExceptionController {
                 new ErrorResponse().code(exe.getCode()).message(exe.getErrorMessage()).
                         rootCause("Question UUID is wrong or does not exists"), HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler(AnswerNotFoundException.class)
+    public ResponseEntity<ErrorResponse> answerNotFoundException(AnswerNotFoundException exe, WebRequest request) {
+        return new ResponseEntity<ErrorResponse>(
+                new ErrorResponse().code(exe.getCode()).message(exe.getErrorMessage()).
+                        rootCause("Answer not found"), HttpStatus.NOT_FOUND);
+    }
 }
