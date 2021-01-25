@@ -3,6 +3,7 @@ package com.upgrad.quora.service.business;
 import com.upgrad.quora.service.dao.AnswerDao;
 import com.upgrad.quora.service.entity.AnswerEntity;
 import com.upgrad.quora.service.entity.UserAuthEntity;
+import com.upgrad.quora.service.exception.AnswerNotFoundException;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,14 @@ public class AnswerService {
 
         answerEntity.setAns(editedAnswerContent);
         answerDao.updateAnswerContent(answerEntity);
+        return answerEntity;
+    }
+
+    public AnswerEntity getAnswerByUuid(String answerId) throws AnswerNotFoundException {
+        AnswerEntity answerEntity = answerDao.getAnswerByUuid(answerId);
+        if (answerEntity == null) {
+            throw new AnswerNotFoundException("ANS-001","Entered answer uuid does not exist");
+        }
         return answerEntity;
     }
 }
