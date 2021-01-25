@@ -17,6 +17,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -103,5 +105,33 @@ public class AnswerController {
         final AnswerDeleteResponse answerDeleteResponse = new AnswerDeleteResponse().id(deletedAnswer.getUuid()).status("ANSWER DELETED");
 
         return new ResponseEntity<AnswerDeleteResponse>(answerDeleteResponse, HttpStatus.OK);
+    }
+
+    /**
+     * This method returns all the answer to a question
+     *
+     * @param questionId answer's uuid
+     * @param accessToken Used for authorization
+     *
+     * @throws AuthorizationFailedException When access token is invalid
+     * @throws InvalidQuestionException when uuid of the question is invalid
+     *
+     * returns list of answers
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "answer/all/{questionId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<List<AnswerDetailsResponse>> getAllAnswersToQuestion(@PathVariable("questionId") final String questionId, @RequestHeader("authorization") final String accessToken) throws AuthorizationFailedException, InvalidQuestionException {
+        commonService.authorizeAccessToken(accessToken);
+        QuestionEntity questionEntity = questionService.getQuestionByUuid(questionId);
+
+        final List<AnswerEntity> allAnswers = answerService.getAllAnswersToQuestion(questionEntity);
+        final List<AnswerDetailsResponse> answerDetailsResponses = new ArrayList<>();
+
+        for (AnswerEntity answer : allAnswers) {
+            AnswerDetailsResponse answerDetailsResponse = new AnswerDetailsResponse().id(answer.getUuid())
+                    .questionContent(questionEntity.getContent()).answerContent(answer.getAns());
+            answerDetailsResponses.add(answerDetailsResponse);
+        }
+
+        return new ResponseEntity<List<AnswerDetailsResponse>>(answerDetailsResponses, HttpStatus.OK);
     }
 }
