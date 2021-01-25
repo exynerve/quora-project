@@ -2,6 +2,9 @@ package com.upgrad.quora.service.business;
 
 import com.upgrad.quora.service.dao.QuestionDao;
 import com.upgrad.quora.service.entity.QuestionEntity;
+import com.upgrad.quora.service.entity.UserAuthEntity;
+import com.upgrad.quora.service.exception.AuthorizationFailedException;
+import com.upgrad.quora.service.exception.InvalidQuestionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -24,4 +27,22 @@ public class QuestionService {
         return questionDao.getAllQuestions();
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
+    public QuestionEntity editQuestionContentByOwner(final String editedContent, final QuestionEntity questionEntity, final UserAuthEntity userAuthEntity) throws AuthorizationFailedException {
+        if (userAuthEntity.getUser() != questionEntity.getUserId()) {
+            throw new AuthorizationFailedException("ATHR-003","Only the question owner can edit the question");
+        }
+
+        questionEntity.setContent(editedContent);
+        questionDao.updateQuestionContent(questionEntity);
+        return questionEntity;
+    }
+
+    public QuestionEntity getQuestionByUuid(final String questionId) throws InvalidQuestionException {
+        QuestionEntity questionEntity = questionDao.getQuestionByUuid(questionId);
+        if (questionEntity == null) {
+            throw new InvalidQuestionException("QUES-001","The question with entered uuid whose details are to be seen does not exist");
+        }
+        return questionEntity;
+    }
 }

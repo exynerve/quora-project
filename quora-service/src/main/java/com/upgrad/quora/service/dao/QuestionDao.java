@@ -27,4 +27,17 @@ public class QuestionDao {
             return null;
         }
     }
+
+    // null value is returned if entity/data is not found
+    public QuestionEntity getQuestionByUuid(final String questionId) {
+        try {
+            return entityManager.createNamedQuery("questionByUuid", QuestionEntity.class).setParameter("uuid", questionId).getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
+    }
+
+    public void updateQuestionContent(final QuestionEntity questionEntity) {
+        entityManager.merge(questionEntity);
+    }
 }

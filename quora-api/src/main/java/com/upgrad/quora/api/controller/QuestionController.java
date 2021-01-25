@@ -1,21 +1,17 @@
 package com.upgrad.quora.api.controller;
 
-import com.upgrad.quora.api.model.QuestionDetailsResponse;
-import com.upgrad.quora.api.model.QuestionRequest;
-import com.upgrad.quora.api.model.QuestionResponse;
+import com.upgrad.quora.api.model.*;
 import com.upgrad.quora.service.business.CommonService;
 import com.upgrad.quora.service.business.QuestionService;
 import com.upgrad.quora.service.entity.QuestionEntity;
 import com.upgrad.quora.service.entity.UserAuthEntity;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
+import com.upgrad.quora.service.exception.InvalidQuestionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -74,6 +70,28 @@ public class QuestionController {
         final List<QuestionDetailsResponse> questionDetailsResponses = convertQuestionListToJson(allQuestions);
 
         return new ResponseEntity<List<QuestionDetailsResponse>>(questionDetailsResponses, HttpStatus.OK);
+    }
+
+    /**
+     * This method is used to edit a question content
+     *
+     * @param questionEditRequest contains the edited content of the question
+     * @param accessToken Used for authorization
+     *
+     * @throws AuthorizationFailedException When access token is invalid
+     * @throws InvalidQuestionException when uuid of the question is invalid
+     *
+     * returns questions's uuid and message "QUESTION EDITED"
+     */
+    @RequestMapping(method = RequestMethod.PUT, path = "/edit/{questionId}", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<QuestionEditResponse> editQuestionContent(final QuestionEditRequest questionEditRequest, @PathVariable("questionId") final String questionId, @RequestHeader("authorization") final String accessToken) throws AuthorizationFailedException, InvalidQuestionException {
+        final UserAuthEntity userAuthEntity = commonService.authorizeAccessToken(accessToken);
+        final QuestionEntity questionEntity = questionService.getQuestionByUuid(questionId);
+
+        final QuestionEntity editedQuestion = questionService.editQuestionContentByOwner(questionEditRequest.getContent(), questionEntity, userAuthEntity);
+        QuestionEditResponse questionEditResponse = new QuestionEditResponse().id(editedQuestion.getUuid()).status("QUESTION EDITED");
+
+        return new ResponseEntity<QuestionEditResponse>(questionEditResponse, HttpStatus.OK);
     }
 
     /**
