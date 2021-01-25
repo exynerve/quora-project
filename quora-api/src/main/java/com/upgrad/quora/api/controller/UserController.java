@@ -46,7 +46,7 @@ public class UserController {
     user.setPassword(signupUserRequest.getPassword());
     user.setUsername(signupUserRequest.getUserName());
     user.setSalt("upgrad@123");
-    user.setRole("non-admin");
+    user.setRole("nonadmin");
 
     final UserEntity createdEntity = userService.createUser(user);
     final SignupUserResponse userResponse = new SignupUserResponse().id(createdEntity.getUuid()).status("USER SUCCESSFULLY REGISTERED");
