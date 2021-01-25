@@ -16,4 +16,9 @@ public class AnswerDao {
         entityManager.persist(answerEntity);
         return answerEntity;
     }
+
+    public void updateAnswerContent(AnswerEntity answerEntity) {
+        entityManager.merge(answerEntity);
+    }
+
 }
