@@ -44,4 +44,13 @@ public class QuestionDao {
     public void deleteQuestion(final QuestionEntity questionEntity) {
         entityManager.remove(questionEntity);
     }
+
+    // null value is returned if entity/data is not found
+    public List<QuestionEntity> getAllQuestionsByUser(final Integer userId) {
+        try {
+            return entityManager.createNamedQuery("questionByUserId", QuestionEntity.class).setParameter("userId", userId).getResultList();
+        } catch (NoResultException nre) {
+            return null;
+        }
+    }
 }

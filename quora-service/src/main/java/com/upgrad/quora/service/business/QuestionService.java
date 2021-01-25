@@ -3,6 +3,7 @@ package com.upgrad.quora.service.business;
 import com.upgrad.quora.service.dao.QuestionDao;
 import com.upgrad.quora.service.entity.QuestionEntity;
 import com.upgrad.quora.service.entity.UserAuthEntity;
+import com.upgrad.quora.service.entity.UserEntity;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import com.upgrad.quora.service.exception.InvalidQuestionException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,5 +55,9 @@ public class QuestionService {
 
         questionDao.deleteQuestion(questionEntity);
         return questionEntity;
+    }
+
+    public List<QuestionEntity> getAllQuestionsByUser(final UserEntity userEntity) {
+        return questionDao.getAllQuestionsByUser(userEntity.getId());
     }
 }

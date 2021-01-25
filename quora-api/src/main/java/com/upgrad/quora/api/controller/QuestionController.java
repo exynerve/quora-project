@@ -5,8 +5,10 @@ import com.upgrad.quora.service.business.CommonService;
 import com.upgrad.quora.service.business.QuestionService;
 import com.upgrad.quora.service.entity.QuestionEntity;
 import com.upgrad.quora.service.entity.UserAuthEntity;
+import com.upgrad.quora.service.entity.UserEntity;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import com.upgrad.quora.service.exception.InvalidQuestionException;
+import com.upgrad.quora.service.exception.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -133,5 +135,27 @@ public class QuestionController {
         }
 
         return questionDetailsResponses;
+    }
+
+    /**
+     * This method returns all the questions created by a user
+     *
+     * @param userId user's id
+     * @param accessToken Used for authorization
+     *
+     * @throws AuthorizationFailedException When access token is invalid
+     * @throws UserNotFoundException when user is not registered
+     *
+     * returns list of questions with uuid and content
+     */
+    @RequestMapping(method = RequestMethod.GET, path = "/all/{userId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<List<QuestionDetailsResponse>> getAllQuestionsByUser(@PathVariable("userId") final String userId, @RequestHeader("authorization") final String accessToken) throws AuthorizationFailedException, UserNotFoundException {
+        commonService.authorizeAccessToken(accessToken);
+        UserEntity userEntity = commonService.getUser(userId);
+
+        final List<QuestionEntity> allQuestions = questionService.getAllQuestionsByUser(userEntity);
+        final List<QuestionDetailsResponse> questionDetailsResponses = convertQuestionListToJson(allQuestions);
+
+        return new ResponseEntity<List<QuestionDetailsResponse>>(questionDetailsResponses, HttpStatus.OK);
     }
 }
