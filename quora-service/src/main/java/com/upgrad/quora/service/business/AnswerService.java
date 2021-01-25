@@ -44,4 +44,14 @@ public class AnswerService {
         }
         return answerEntity;
     }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    public AnswerEntity deleteAnswerByUserOrAdmin(UserAuthEntity userAuthEntity, AnswerEntity answerEntity) throws AuthorizationFailedException {
+        if (userAuthEntity.getUser() != answerEntity.getUserId() || (userAuthEntity.getUser() != answerEntity.getUserId() && !userAuthEntity.getUser().getRole().equals("admin"))) {
+            throw new AuthorizationFailedException("ATHR-003","Only the answer owner or admin can delete the answer");
+        }
+
+        answerDao.deleteAnswer(answerEntity);
+        return answerEntity;
+    }
 }
