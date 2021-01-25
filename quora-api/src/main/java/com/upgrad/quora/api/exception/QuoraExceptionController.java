@@ -33,7 +33,7 @@ public class QuoraExceptionController {
     }
 
     @ExceptionHandler(AuthenticationFailedException.class)
-    public ResponseEntity<ErrorResponse> authenticationFailed(AuthorizationFailedException exception, WebRequest request){
+    public ResponseEntity<ErrorResponse> authenticationFailed(AuthenticationFailedException exception, WebRequest request){
 
         return new ResponseEntity<ErrorResponse>(
                 new ErrorResponse().code(exception.getCode()).message(exception.getErrorMessage()), HttpStatus.UNAUTHORIZED );
