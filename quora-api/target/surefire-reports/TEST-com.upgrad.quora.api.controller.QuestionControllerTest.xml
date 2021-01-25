@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.upgrad.quora.api.controller.CommonControllerTest" time="0.281" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.upgrad.quora.api.controller.QuestionControllerTest" time="0.283" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -60,7 +60,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="detailsOfNonExistingUser" classname="com.upgrad.quora.api.controller.CommonControllerTest" time="0"/>
-  <testcase name="detailsUsingNonExistingAccessToken" classname="com.upgrad.quora.api.controller.CommonControllerTest" time="0"/>
-  <testcase name="details" classname="com.upgrad.quora.api.controller.CommonControllerTest" time="0"/>
+  <testcase name="getAllQuestionsWithSignedOutUser" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="deleteQuestionWithSignedOutUser" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="deleteQuestionWithoutOwnership" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="createQuestionWithSignedOutUser" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="getAllQuestionsByUserWithNonExistingAccessToken" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="getAllQuestionsForNonExistingUser" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="createQuestionWithNonExistingAccessToken" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="editQuestionWithWithSignedOutUser" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="editQuestionWithNonExistingAccessToken" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="deleteQuestionWithNonExistingAccessToken" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="editQuestionWithoutOwnership" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="deleteNoneExistingQuestion" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="getAllQuestionsByUserWithSignedOutUser" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="editNonExistingQuestion" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="getAllQuestions" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
+  <testcase name="getAllQuestionsWithNonExistingAccessToken" classname="com.upgrad.quora.api.controller.QuestionControllerTest" time="0"/>
 </testsuite>
